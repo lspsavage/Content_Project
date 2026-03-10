@@ -149,3 +149,51 @@ if (mobileMenuBtn && mobileMenu) {
     });
   });
 }
+
+// --- ScrollReveal Animation ---
+if (typeof ScrollReveal !== "undefined") {
+  // Overview Section
+  ScrollReveal().reveal("#overview > div", {
+    delay: 200,
+    distance: "50px",
+    origin: "bottom",
+    interval: 200,
+    easing: "ease-in-out",
+  });
+
+  // Research Question Section
+  ScrollReveal().reveal("#question h2, #question ol", {
+    delay: 200,
+    distance: "50px",
+    origin: "bottom",
+    interval: 100,
+    easing: "ease-in-out",
+  });
+
+  // Dashboard Section
+  ScrollReveal().reveal("#dashboard > div, #dashboard > img", {
+    delay: 200,
+    distance: "50px",
+    origin: "bottom",
+    interval: 200,
+    easing: "ease-in-out",
+  });
+
+  // Insight Section
+  ScrollReveal().reveal("#insight h2, #insight p, #insight .flex", {
+    delay: 200,
+    distance: "50px",
+    origin: "bottom",
+    interval: 100,
+    easing: "ease-in-out",
+  });
+
+  // Footer
+  ScrollReveal().reveal("footer .flex, footer .my-4, footer .text-sm", {
+    delay: 200,
+    distance: "50px",
+    origin: "bottom",
+    interval: 100,
+    easing: "ease-in-out",
+  });
+}
