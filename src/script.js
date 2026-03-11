@@ -1,6 +1,8 @@
 ﻿// Particle.js
 if (window.tsParticles) {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const particleContainer = document.getElementById("tsparticles");
+  const themeColor = particleContainer?.getAttribute("data-color") || "#22d3ee"; // Default Cyan
 
   tsParticles.load("tsparticles", {
     fpsLimit: 120,
@@ -15,7 +17,7 @@ if (window.tsParticles) {
         },
       },
       color: {
-        value: "#22d3ee", // Warna diubah menjadi cyan agar sesuai tema
+        value: themeColor, // Warna dinamis sesuai tema
       },
       shape: {
         type: "circle", // Bentuk partikel tetap sama
@@ -39,7 +41,7 @@ if (window.tsParticles) {
       links: {
         enable: true,
         distance: 150, // Sesuaikan jarak link partikel
-        color: "#22d3ee", // Warna link disesuaikan dengan tema
+        color: themeColor, // Warna link dinamis
         opacity: 0.4, // Sama dengan opacity dari kode pertama
         width: 1,
       },

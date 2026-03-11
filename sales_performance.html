@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Performance Analysis</title>
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="min-h-screen bg-[#0a0510] text-slate-100 antialiased">
+  <!-- Particle dengan tema warna Violet (#a78bfa) -->
+  <div id="tsparticles" class="fixed inset-0 z-0" data-color="#a78bfa"></div>
+
+  <!-- Cursor Glow Violet -->
+  <div id="cursor-glow"
+    class="pointer-events-none fixed left-0 top-0 z-50 h-96 w-96 rounded-full bg-violet-500/15 blur-3xl opacity-0 transition-opacity duration-300">
+  </div>
+
+  <!-- Background Gradient Violet -->
+  <div
+    class="pointer-events-none fixed inset-0 z-[1] bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.1),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.1),transparent_40%),linear-gradient(to_bottom,rgba(20,10,30,0.2),rgba(10,5,15,0.4))]">
+  </div>
+
+  <header class="relative z-10 border-b border-slate-800/70 backdrop-blur">
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
+      <div class="flex items-center gap-4">
+        <a href="https://lspsavage.github.io/My_porto/page_project.html"
+          class="group flex items-center justify-center rounded-full border border-slate-700 bg-slate-800/50 p-2 text-slate-400 transition hover:border-violet-500/50 hover:text-violet-300"
+          aria-label="Kembali">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+        </a>
+        <a href="#" class="text-sm font-semibold tracking-[0.18em] text-violet-300">DATA ANALYST PROJECT</a>
+      </div>
+      <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+        <a class="transition hover:text-violet-300" href="#overview">Overview</a>
+        <a class="transition hover:text-violet-300" href="#question">Research</a>
+        <a class="transition hover:text-violet-300" href="#dashboard">Dashboard</a>
+        <a class="transition hover:text-violet-300" href="#insight">Insight</a>
+      </nav>
+      <button id="mobile-menu-btn" class="block text-slate-300 hover:text-violet-300 md:hidden" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-slate-800 bg-slate-900/95 px-6 py-4 md:hidden">
+      <nav class="flex flex-col space-y-4 text-sm text-slate-300">
+        <a class="transition hover:text-violet-300" href="#overview">Overview</a>
+        <a class="transition hover:text-violet-300" href="#question">Research</a>
+        <a class="transition hover:text-violet-300" href="#dashboard">Dashboard</a>
+        <a class="transition hover:text-violet-300" href="#insight">Insight</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-10 md:pt-14">
+    <section id="overview" class="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+      <div>
+        <p
+          class="mb-3 inline-flex rounded-full border border-violet-400/35 bg-violet-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-violet-200">
+          RETAIL SALES DATASET</p>
+        <h1 class="text-3xl font-black leading-tight text-white md:text-5xl">Sales Performance Analysis</h1>
+        <p class="mt-5 max-w-2xl text-sm leading-7 text-slate-300 md:text-base">
+          Analisis komprehensif terhadap kinerja penjualan untuk mengidentifikasi tren pendapatan, profitabilitas
+          produk, dan perilaku pelanggan.
+          Proyek ini berfokus pada metrik utama seperti <span class="font-semibold text-violet-200">Sales Growth</span>,
+          <span class="font-semibold text-violet-200">Profit Margin</span>, dan
+          <span class="font-semibold text-violet-200">Customer Segmentation</span>.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="https://github.com/lspsavage/DataAnalyst_sales-performance" target="_blank" rel="noopener noreferrer"
+            class="rounded-lg bg-violet-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-violet-400">Lihat
+            Repo</a>
+          <!-- Placeholder link jika dataset spesifik belum ada, bisa diarahkan ke repo atau kaggle -->
+          <a href="https://www.kaggle.com/datasets/mehmettahiraslan/customer-shopping-dataset/" target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-lg border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-violet-300 hover:text-violet-200">Lihat
+            Dataset</a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-2xl shadow-violet-900/20">
+        <h2 class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-300">Project Focus</h2>
+        <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+          <div class="rounded-xl border border-slate-700 bg-slate-800/60 p-3">
+            <p class="text-slate-400">Analisis</p>
+            <p class="mt-1 font-bold text-violet-200">Trend & Seasonality</p>
+          </div>
+          <div class="rounded-xl border border-slate-700 bg-slate-800/60 p-3">
+            <p class="text-slate-400">Metrik</p>
+            <p class="mt-1 font-bold text-violet-200">KPI Dashboard</p>
+          </div>
+          <div class="rounded-xl border border-slate-700 bg-slate-800/60 p-3">
+            <p class="text-slate-400">Teknik</p>
+            <p class="mt-1 font-bold text-violet-200">Pareto (80/20)</p>
+          </div>
+          <div class="rounded-xl border border-slate-700 bg-slate-800/60 p-3">
+            <p class="text-slate-400">Visualisasi</p>
+            <p class="mt-1 font-bold text-violet-200">Tableau / Power BI</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="question" class="mt-14 rounded-2xl border border-slate-800 bg-slate-900/55 p-6 md:p-8">
+      <h2 class="text-2xl font-bold text-white">Research Question</h2>
+      <ol class="mt-5 list-decimal space-y-3 pl-5 text-sm leading-7 text-slate-300 md:text-base">
+        <li>Bagaimana tren penjualan bulanan dan tahunan perusahaan?</li>
+        <li>Kategori produk mana yang memberikan kontribusi profit terbesar?</li>
+        <li>Wilayah (Region) mana yang memiliki performa penjualan terendah dan tertinggi?</li>
+        <li>Siapa saja pelanggan top yang berkontribusi pada 80% pendapatan (Analisis Pareto)?</li>
+        <li>Apakah pemberian diskon berkorelasi positif dengan peningkatan volume penjualan?</li>
+      </ol>
+    </section>
+
+    <section id="dashboard" class="mt-14 grid gap-8 md:grid-cols-[1fr_1fr] md:items-center">
+      <div>
+        <h2 class="text-2xl font-bold text-white">Sales Dashboard</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-300 md:text-base">
+          Dashboard interaktif dirancang untuk memantau KPI utama secara real-time.
+          Memungkinkan manajemen untuk melihat performa antar kategori, segmen pelanggan, dan wilayah geografis.
+        </p>
+        <ul class="mt-5 space-y-2 text-sm text-slate-300 md:text-base">
+          <li>- Overview Total Sales, Profit, dan Quantity.</li>
+          <li>- Filter interaktif berdasarkan Tahun, Kuartal, dan Region.</li>
+          <li>- Visualisasi peta sebaran penjualan.</li>
+        </ul>
+      </div>
+      <!-- Placeholder Image untuk Dashboard Sales -->
+      <img src="https://github.com/lspsavage/DataAnalyst_sales-performance/raw/master/image/sales_performance.png"
+        alt="Power BI Dashboard Boston Housing"
+        class="w-full rounded-2xl border border-slate-700 shadow-2xl shadow-cyan-950/30">
+    </section>
+
+    <section id="insight" class="mt-14 rounded-2xl border border-violet-400/25 bg-violet-400/8 p-6 md:p-8">
+      <h2 class="text-2xl font-bold text-white">Hasil Akhir & Insight</h2>
+      <p class="mt-4 text-sm leading-7 text-slate-200 md:text-base">
+        Produk teknologi memiliki margin profit tertinggi meskipun volume penjualannya lebih rendah dibandingkan
+        kategori office supplies.
+        Diskon di atas 20% cenderung menggerus profitabilitas tanpa peningkatan volume yang signifikan.
+        Pelanggan korporat memberikan stabilitas pendapatan jangka panjang.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2 text-xs font-semibold tracking-wide text-violet-100 md:text-sm">
+        <span class="rounded-full border border-violet-300/45 bg-violet-300/15 px-3 py-1">Python</span>
+        <span class="rounded-full border border-violet-300/45 bg-violet-300/15 px-3 py-1">SQL</span>
+        <span class="rounded-full border border-violet-300/45 bg-violet-300/15 px-3 py-1">Tableau</span>
+        <span class="rounded-full border border-violet-300/45 bg-violet-300/15 px-3 py-1">Data Cleaning</span>
+      </div>
+    </section>
+  </main>
+
+  <footer
+    class="relative z-10 flex flex-col items-center gap-6 border-t border-slate-800 bg-[#05020a] py-8 text-center text-slate-400">
+    <div class="flex justify-center gap-4">
+      <a href="https://www.instagram.com/luthfasp?igsh=MXJjdGVsOWVzMmJhcw==" target="_blank"
+        class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-800/50 text-slate-300 transition hover:bg-violet-400/10 hover:text-violet-300">
+        <!-- Instagram SVG -->
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect width="18" height="18" x="3" y="3" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <path d="M17.5 6.5h.01" />
+        </svg>
+      </a>
+      <a href="https://github.com/lspsavage" target="_blank"
+        class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-800/50 text-slate-300 transition hover:bg-violet-400/10 hover:text-violet-300">
+        <!-- Github SVG -->
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.867 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.528 2.341 1.087 2.91.832.091-.647.35-1.087.636-1.338-2.221-.253-4.555-1.111-4.555-4.944 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.566 4.936.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .268.18.579.688.481C19.135 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/luthfa-sobrian-pramasta-0818ba337/" target="_blank"
+        class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-800/50 text-slate-300 transition hover:bg-violet-400/10 hover:text-violet-300">
+        <!-- LinkedIn SVG -->
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.034 0 3.595 1.997 3.595 4.59v5.606z" />
+        </svg>
+      </a>
+    </div>
+    <div class="my-4">
+      <!-- Rocket SVG -->
+      <svg class="mx-auto h-8 w-8 text-slate-300" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path d="M12 2C12 2 7 7 7 12c0 2.761 2.239 5 5 5s5-2.239 5-5c0-5-5-10-5-10z" />
+        <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+        <path d="M12 17v4m-2 0h4" stroke-linecap="round" />
+      </svg>
+    </div>
+    <div class="text-sm text-slate-400">
+      &copy; Luthfa Sobrian 2025
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script src="./src/script.js"></script>
+</body>
+
+</html>
